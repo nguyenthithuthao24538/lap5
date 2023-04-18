@@ -1,4 +1,4 @@
---câu 1--
+--cÃ¢u 1--
 CREATE TRIGGER Nhapdulieu1 ON Nhap
 FOR INSERT AS
 BEGIN 
@@ -27,7 +27,7 @@ BEGIN
 		END
 	END
 END
---câu 2--
+--cÃ¢u 2--
 CREATE TRIGGER XuatHang123 ON Xuat
 FOR INSERT AS
 BEGIN 
@@ -56,7 +56,7 @@ BEGIN
 		END
 	END
 END
---câu 3--
+--cÃ¢u 3--
 CREATE TRIGGER XoaPhieuXuat ON Xuat
 FOR DELETE AS
 BEGIN
@@ -64,7 +64,7 @@ BEGIN
 	FROM Sanpham 
 	JOIN deleted ON Sanpham.masp=deleted.Masp
 END
---câu 4--
+--cÃ¢u 4--
 CREATE TRIGGER [dbo].[XuatHang123] ON [dbo].[Xuat]
 FOR UPDATE AS
 BEGIN 
@@ -77,7 +77,7 @@ BEGIN
 		ROLLBACK TRAN
 	END
 END
---câu 5--
+--cÃ¢u 5--
 CREATE TRIGGER [dbo].[Capnhatdulieu] ON [dbo].[Nhap]
 FOR UPDATE AS
 BEGIN 
@@ -90,7 +90,7 @@ BEGIN
 			ROLLBACK TRAN
 		END
 END
---câu 6--
+--cÃ¢u 6--
 CREATE TRIGGER XoaPhieuNhap ON Nhap
 FOR DELETE AS
 BEGIN
