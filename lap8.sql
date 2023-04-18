@@ -1,4 +1,4 @@
---câu 1--
+--cÃ¢u 1--
 CREATE PROC ChinhsuaNV(@manv nvarchar(10), @tennv nvarchar(20), @gioitinh nvarchar(10), @diachi nvarchar(20), @sodt nvarchar(10), @email nvarchar(20), @phong nvarchar(30), @Flag int)
 AS
 	IF @gioitinh IN('nam', 'nu')
@@ -22,7 +22,7 @@ AS
 	END
 GO
 
---câu 2--
+--cÃ¢u 2--
 CREATE PROC ThemMoiSanPham122(@masp nvarchar(10), @tensp nvarchar(20), @tenhang nvarchar(20), @soluong int, @mausac nvarchar(10), @giaban money,  @donvitinh nvarchar(10), @mota nvarchar(30), @flag int)
 AS
 	IF @flag = 0
@@ -65,7 +65,7 @@ AS
 	END
 GO
 
---câu 3--
+--cÃ¢u 3--
 CREATE PROC XoaNhanVien (@manv nvarchar(10))
 AS
 	IF @manv IN (SELECT Manv FROM Nhanvien)
@@ -81,7 +81,7 @@ AS
 		ROLLBACK TRAN
 	END
 GO
---câu 4--
+--cÃ¢u 4--
 CREATE PROC XoaSanPham (@masp nvarchar(10))
 AS
 	IF @masp IN (SELECT masp FROM sanpham)
@@ -98,7 +98,7 @@ AS
 	END
 GO
 
---câu 5--
+--cÃ¢u 5--
 CREATE PROC NhapLieuHangSX1(@mahangsx nvarchar(10), @tenhang nvarchar(20), @diachi nvarchar(20), @sodt nvarchar(10), @email nvarchar(20))
 AS 
 	IF @tenhang NOT IN (SELECT Tenhang FROM Hangsx)
@@ -112,7 +112,7 @@ AS
 	END
 GO
 
---câu 6--
+--cÃ¢u 6--
 CREATE PROC Nhaphang12(@shdn nvarchar(10), @masp nvarchar(10), @manv nvarchar (10), @ngaynhap date, @soluongN int, @dongiaN money)
 AS
 	IF @masp IN (SELECT masp FROM Sanpham) AND @manv IN (SELECT Manv FROM Nhanvien)
@@ -147,7 +147,7 @@ AS
 		END
 	END
 GO
---câu 7--
+--cÃ¢u 7--
 CREATE PROC Xuathang12(@shdx nvarchar(10), @masp nvarchar(10), @manv nvarchar (10), @ngayxuat date, @soluongX int)
 AS
 	IF @masp IN (SELECT masp FROM Sanpham) AND @manv IN (SELECT Manv FROM Nhanvien) AND @soluongX <= (SELECT TOP 1 soluong FROM Sanpham)	
